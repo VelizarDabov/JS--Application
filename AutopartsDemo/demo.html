@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Demo</title>
+    <style>
+    table,tr,th,td{border-collapse: collapse;
+        border: 1px solid black
+    }
+    td, th {
+        padding: 8px 4px;
+    }
+    #editor_edit{
+        display: none;
+    }
+        </style>
+</head>
+<body>
+    <section id="index">
+    <h2>Part Index</h2>
+    <button id="load-btn"> Load Database</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Part ID</th>
+            <th>Label</th>
+            <th>Price</th>
+            <th>Available Quantity</th>
+            <th>Control</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+       
+            <tr>
+            <td>12345</td>
+            <td>Wiper Fluid</td>
+            <td>15</td>
+            <td>56</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12346</td>
+            <td>Brake Fluid</td>
+            <td>10</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <section id="editor_create">
+        <h2>Part Editor</h2>
+        <div>
+            <span>Label</span>
+            <input type="text" id="part_label">
+        </div>
+      <div>
+        <span>Price</span>
+        <input type="number" id="part_price">
+      </div>
+        <div>
+            <span>Quantity</span>
+            <input type="number" id="part_qty">
+        </div>
+       <div>
+        <button id="create-btn">Create Part</button>
+       </div>
+       </section>
+      
+       <section id="editor_edit">
+        <h2>Edit Part</h2>
+        <input type="hidden" id="edit_part_id"></input>
+        <div>
+            <span>Label</span>
+            <input type="text" id="edit_part_label">
+        </div>
+      <div>
+        <span>Price</span>
+        <input type="number" id="edit_part_price">
+      </div>
+        <div>
+            <span>Quantity</span>
+            <input type="number" id="edit_part_qty">
+        </div>
+       <div>
+        <button id="save-btn">Save Part</button>
+        <button id="cancel-btn">Cancel</button>
+       </div>
+       </section>
+   
+    <script src="app.js"></script>
+</body>
+</html>
